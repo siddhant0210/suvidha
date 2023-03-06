@@ -1,0 +1,1458 @@
+                                                                          JAVASCRIPT NOTES - THAPA TECHNICALS 
+
+1
+    VALUES AND VARIABLES
+
+var myName='vinod bahadur thapa';
+console.log(myName);
+
+NAMING VARIABLES:RULES AND BEST PRACTICES
+  XThe first character must be a letter or an underscore(-)or an
+    dollar($).You can't useanumber as the first character.
+  XThe rest of the variable name can include any letter,any number,or
+    the underscore.Can't use any other characters,including spaces.
+  XVariable names are case sensitive.
+  XNo limit to the length of the variable name.
+  XYou can't use one of JavaScript's reserved words asavariable name.
+
+
+2
+     DATA TYPES IN JAVASCRIPT
+ 
+
+DATA TYPES IN JAVASCRIPT
+Six Data Types that are primitives,
+
+  undefined:typeof instance ==="undefined"
+  Boolean:typeof instance ==="boolean"
+   Number:typeof instance ==="number"
+   String:typeof instance ==="string"
+   BigInt:typeof instance ==="bigint"
+Symbol:typeof instance ==="symbol"
+
+
+// var myName= "vinod thapa";
+   console.log(myName);
+var myAge=26;
+console.log(myAge);
+// typeof operator
+console.log(typeof(myAge));
+
+basically typeof aapko btaa deta hai ki konsa data type use hua hai ......kyunki isme ek hi key word hota hai isilye hmme ptaa nhn  chl pata
+ki java script me konsa datatype hai .......yeah sirf javascript ke liye hota hai 
+
+
+// DataTypes Practice
+// console.log(10+"20");
+
+E:\MERN\JS2021>node index.js
+1020   //hmmra jo output tha wo concatinate ho gya 
+
+//9-"5"
+// console.log(9-"5");// bug
+E:\MERN\JS2021>node index.js
+4  // yhaa prrr  yeah actual me minus krr de rhaa hai, wo bhi string ko aur ek number ko, yeah ek tarike ka bug hai javascript me!!!
+
+//"Java"+"Script"
+console.log("Java"+"Script");
+E:\MERN\JS2021>node index.js
+JavaScript // yeah b hi concatinate krrr gyaa
+
+console.log(true+true);
+1true
+0false
+E:\MERN\JS2021>node index.js
+2 // java script me true ko 1 khte hai aur false ko 0......bascially micro wala system
+
+
+
+// Interview Question1                                                                 (  IMPORTANT POINT ) 
+// Difference between null vs undefined
+
+var iAmUseless=null;
+console.log(iAmUseless);
+console.log(typeof(iAmUseless));
+E:\MERN\JS2021>node index.js
+null  // hmmne ek value assign krri hai nulll isililye yeah aaya hai 
+object // BUG 2 yeah bhi ek bug hai agr hmm koi value hi nhn de rhee toh data type object aa rhaa hai ......java script ka 2nd bug
+
+
+var iAmStandBy;
+console.log(iAmStandBy);
+console.log(typeof(iAmStandBy)); 
+
+E:\MERN\JS2021>node index.js
+undefined   // basically yeah ek, jaisa ki cricket me 12th man hota hai na jo stand by hota hai waise hi yeah bhi hota hai 
+hmme nhn ptaa ki wo stand by player kiss particular player ki jgh lega fielding ke tym prrr isilye hmm isko koi value assign nhn 
+krte hain......
+undefined // data type
+
+
+
+2:INTERVIEW QUESTION                                                (  IMPORTANT POINT ) 
+What is NaN?                                                                           
+          
+var Name = ''Java'' - ''Script'';
+console.log(Name);
+
+NAN   //  do string ko minus krne prr aata hai  
+
+// NaN isaproperty of the global object.
+// In other words,it isavariable in global scope.
+// The initial value of NaN is Not-A-Number
+
+// BHT MST CHEEZ HAI CONTACT FORM ME AGR AAP KOI AADHURA NUMBER DAALOGE TOH YEAH AAPKO BTAA DEGA KI AAP GLT
+NUMBER DAAL RHEE HAIN, SHI NUMBER DAALEIN;
+
+var Num = 987654321;
+var Str = 'abcdefgh';
+console.log(isNaN(Num));
+console.log(isNaN(Str));
+if(isNaN(Str)){
+    console.log("please enter a valid phone number");
+}
+
+
+PS C:\Users\SIDDHANT\OneDrive\Documents\Javascript> node index.js                                         
+false                                                                                                                                         <------ OUTPUT (mst hai naa)
+true
+please enter a valid phone number
+
+
+
+3
+  EXPRESSIONS AND OPERATORS
+
+Combination of operands(basically number) and operator (basically jo sign hote hain )  is called EXPRESSION
+
+assignment operator "=" left wali value right me de denaa but jaisa ki baaki languages me hota hai  jaise ki hmme koi text denaa hota hia toh hmm concatia
+te krtee hai but agr yhaa prr hmm waise krenge toh output nhn aaega yaa glt aaega.
+
+arithmetic operator (+,-,\,*,%, increment, decrement)
+isme increment aur decrement me bhi chod hoti hai isme aap ko dekhnaa pdta hai ki prefix hai yaa postfix  agr prefix hai toh 
+value ko update krr degaa lekin agr postfix hai toh wo baad me value ko update kregaa DEKH KRR KRNAA HMEESHA!!!
+
+(BONUS - kbhi bhi aap ko agr 3**3 aaisa mile toh iska mtlb phle wale number ki power utne baar jitni bhi baar peeche wala number hai)
+
+
+logical operator (&&) AND  operator hai jisme agr saare operands  true honge tbh itrue hoga wrnaa nhn hogaa !! 
+logical operator (||) OR operator hai jisme agr ek bhi value true hai toh true hoggaaa !!!!
+logical operator (!) NOT  jo bhii answer aaega uska ulta phek degaa mtlb ki true kl jgh false and  vice versa.
+  
+
+comapraison operator(== , != , > ,< , >= ,=<) simple seedhaq hisab agr value same hai toh true nhn toh seedha false 
+
+
+string operator (+) concattenation operator 
+basically do string  ko add krne ke kaam me aata hai  
+
+
+ternary operator(?) 
+
+
+
+
+INTERVIEW QUESTION 3 
+
+DIFFERENCE BETWEEN == AND === ?
+
+== aapki value check kregaa sirf     eg.  console.log((5) ==('5')) yeah true hogaa == ke case me 
+=== aapki value bhi aur datatype bhi check krregaa kregaa aur same eg. me wo false degaa.....
+
+
+
+
+4
+  CONTROL STATEMENT & LOOPS 
+CONTROL STATEMENT & LOOPS
+X If..Else
+1 If ... Else */
+// The if statement executes a statement if a specified condition is truthy.
+If the condition is falsy, another statement can be executed.
+
+var tomr = 'rain!';
+if(tomr= 'rain') {
+console.log('take a raincoat');
+}
+else{
+console.log('No need to take a raincoat')
+}
+
+
+
+
+What is truthy and falsy values in Javascript?
+
+// we have total 5 falsy values in javascript
+
+0,"", undefined, null, NaN, false** is false anyway
+
+jab bhi in falsy value me se koi bhi value tmhre if block wale me rhegi toh aapko hmmesha,
+jo else block wale me value hongi unko print kregaa 
+
+
+X Switch Statement (bested if else ka option)
+
+var area = "circle";
+var PI = 3.14, l = 5 , b = 4 , r = 3;
+
+switch(area){
+    case "circle":
+    console.log("area of the circle is" + PI*r**2);
+    case "triangle":
+    console.log("area of the triangle is" + (l*b)/2);
+
+}
+
+
+X While Loop
+X Do-While Loop
+X For Loop
+X Conditional (ternary) operator
+
+only operator in java script which uses threee operands 
+ variablename = (condition) ? value1:value2  basically if else ka short form hai yeh
+
+var age = 17;
+console.log((age>=18)? "can vote":"can't vote");
+   
+
+
+For in Loop
+For of Loop
+
+
+
+5
+  FUNCTIOINS IN JS 
+
+Interview Question
+// Why Functions?
+// You can reuse code: Define the code once, and use it many times. 
+// You can use the same code many times with different arguments, 
+// to produce different results.
+// OR
+// A function is a group of reusable code which can be called anywhere 
+// in your program. This eliminates the need of writing the same code 
+again and again.
+
+
+ function definitions
+
+function functionName()
+{
+}
+//Statement
+
+
+
+ calling a function 
+ function parameter 
+
+3 Function Parameter vs Function Arguments
+// Function parameters are the names listed in the function's definition.
+// Function arguments are the real values passed to the function.
+function sum(a,b){     // jo yhaa sum ke aandr value hai usko parameter khte hain 
+var total = a+b;             
+console.log(total);
+}
+sum(); 
+sum(20,30);   // aur jo function call ke time value hai unko arguments khte hain 
+sum (50,50);
+
+function expressions 
+
+// 4 Function expressions
+// "Function expressions simply means 
+// create a function and put it into the variable
+function sum(a,b){
+var total = a+b; 
+console.log(total);
+}
+var funExp = sum(5,15);
+
+
+return keyword 
+
+function sum(a,b){ 
+return total = a+b;
+}
+var funExp = sum(5,25);
+console.log(funExp);
+
+function ko ek variable me put krr denaa function expression khlata hai 
+
+6
+  anonymouse function 
+
+
+ 
+var funExp = function(a,b){      // function ka naam hi nhn hai isilye yeah anonymous hai 
+return total = a+b;
+}
+var sum = funExp(15, 15);
+console.log('the sum of two no is' + sum );
+  
+
+
+
+WELCOME      TO     ECMAScript
+
+
+{
+function biodata() 
+let myFirstName = "Vinod"; 
+console.log(myFirstName);
+}
+if(true){
+let myLastName = "thapa"; 
+console.log('inner' + myLastName);  
+console.log('inner' + myFirstName);
+}
+
+
+console.log('innerOuter + myLast Name);
+biodata();
+
+
+// var Function scope 
+// let and const➡ Block Scope
+
+
+OUTPUT 
+
+E:\MERN\JS2021>node index.js
+Vinod
+inner thapa 
+inner Vinod
+
+
+E:\MERN\JS2021\index.js:745 
+console.log('innerOuter + myLastName);
+ReferenceError: myLastName is not defined
+at biodata (E:\MERN\JS2021\index.js:745:31) 
+at Object.<anonymous> (E:\MERN\JS2021\index 
+.js:748:1)
+at Module._compile (internal/modules/cjs/lo 
+ader.js:1137:30)
+at Object.Module._extensions..js (internal/
+modules/cjs/loader.js:1157:10)
+at Module.load (internal/modules/cjs/loader 
+.js:985:32)
+at Function.Module._load (internal/modules/
+at Function.executeUser EntryPoint [as runMa
+cjs/loader.js:878:14)
+in] (internal/modules/run_main.js:71:12)
+at internal/main/run_main_module.js:17:47
+
+
+uppr wale example ne show kiya ki var aur let and  const me kyaa differnece hota hai 
+var wale varaiable name ko hmm khii prr use krr skte hai but let wale  me ek particular block space ke aandr hi 
+krtee hai .........aur const me toh aap uss defined variable ko change hi nhn krr skte!!    (IMP HAI AANGE KE LIYEE IGNORE MAT KRIYO)
+
+
+
+
+ // 2 Template literals (Template strings)
+// JavaScript program to print table for given number (12)?
+
+   for( let Name = 1; Name <=10 ; Name++){
+    let tableof = 12;
+    console.log(`${tableof} * ${Name} =  ${tableof * Name}` ); 
+}
+
+12 * 1 =  12
+12 * 2 =  24
+12 * 3 =  36
+12 * 4 =  48
+12 * 5 =  60
+12 * 6 =  72
+12 * 7 =  84
+12 * 8 =  96
+12 * 9 =  108
+12 * 10 =  120
+
+
+
+3
+  DEFAULT PARAMETERS
+
+ // 3 Default Parameters
+// Default function parameters allow named parameters to be
+// initialized with default values if no value or undefined is passed.
+
+
+
+function mult(a,b=5){ 
+return a*b;
+}
+console.log(mult(3));
+
+isme jo hmmne b ko default value di hai whii use hogi jab hmm koi bhi value nhn dene arguments me 
+
+isme aapka output 15 aegaa !!
+
+
+6
+ Fat Arror Function
+Normal Way of writing Function
+console.log(sum()); |
+function sum() {
+ let a = 5; b = 6;
+ let sum= a+b;
+return `the sum of the two number is ${sum}`
+}
+
+
+How to convert in into Fat Arrow Function
+const sum = ( ) ⇒ `the sum of the two number is ${(a=5)+(b=6)`;      // jab ek hi line print krwani hoti hai naa toh return keyword nhn lagate
+console.log(sum());   // yeah console hmmesha aapko functio9n define krne ke baad likhnaa hotaa hai
+
+ek hi line me pura code aa gyaa 
+
+
+7
+  ARRAYS IN JAVA SCRIPT 
+
+
+// When we use var, we can stored only one value at a time. 
+var friend1 = 'ramesh'; 
+var friend2 = 'arjun';
+var friend3 = 'vishal';
+
+var my Friends = ['ramesh',22,male, 'arjun',20,male, 'vishal', true, 52];  // bdi bawal cheez hai be kch bhi daal do array ke aandr    
+
+
+// When we feel like storing multiple values in one variable then 
+// instead of var, we will use an Array.
+
+
+array ke phle element ko hmm lower index yaa phir lower boundary khtee hain 
+array ke last  element ko hmm higher index yaa phir higher boundary bhi khtee hain
+indexing hmmesha 0 se hi chalu hoti hai 
+
+
+                                             
+
+
+                                                            Traversal of an Array
+                                                    Searching and Filter in an Array
+                                                  How to Sort and Compare an Array
+                                 How to Insert, Add, Replace and Delete Elements in Array(CRUD) 
+                                                        Map(), Reduce(), Filter()
+
+
+
+X  Traversal of an Array
+
+krtee toh for loop se hii hai but yeah js hai yhaaa chod naa ho aaisa toh ho hi nhn sktraaa 
+
+// After ES6 we have for.. in and for.. of loop too                                    ////FOR IN LOOP 
+var my Friends = ['vinod', 'ramesh', 'arjun', 'vishal'];
+for(let elements in my Friends) { 
+console.log(elements);                             // iska outrput aapko seedha elemets ke index ko print krwaa degaa 
+}
+
+// After ES6 we have for.. in and for.. of loop too
+var my Friends = ['vinod', 'ramesh', 'arjun', 'vishal'];                                ///FOR OFF LOOP
+for(let elements of  my Friends) { 
+console.log(elements);                             //   // iska outrput aapko seedha elements  ko print krwaa degaa 
+}
+
+
+// Array.prototype.forEach()
+// Calls a function for each element in the array.
+var myFriends = ['vinod', 'ramesh', 'arjun', 'vishal'];
+myFriends.forEach(function(element, index, array) { 
+console.log(element + " index : " + 
+index + " " + array);
+});                                                                                // bht shi cheez hai element ka naam , index aur element konse array se aaya hai wo bhi btaa deta haio for eachlop
+
+//output
+
+vinod index: 0 vinod,ramesh,arjun,vishal
+ramesh index: 1 vinod,ramesh,arjun,vishal
+arjun index: 2 vinod,ramesh,arjun,vishal
+vishal index: 3 vinod,ramesh,arjun,vishal
+
+
+myFriends.forEach((element, index , array) =>{                                        
+console.log(element + " index : " +                                           // fat arrow function me aap aaise likh sktee ho  but isme wo this wala nhn aa paaega 
+index + " " + array);
+});
+index, array)
+
+
+X  Searching and Filter in an Array
+
+// Array.prototype.indexOf()
+// Returns the first (least) index of an element within the array equal 
+// to an element, or -1 if none is found. It search the element from the 
+// 0th index number
+var myFriendNames = ["vinod","bahadur","thapa","thapatechnical","thapa"]; 
+console.log(my FriendNames.indexOf("Thapa", 3));
+
+//output -1  //  kyunki T hai aur arrray ke elements me koi  T ka koi element hi nhn hai 
+
+
+// Array.prototype.lastIndexOf() t
+// Returns the last (greatest) index of an element within the array equal 
+// to an element, or -1 if none is found. It search the element last to first
+var myFriendNames = ["vinod",
+"bahadur","thapa","thapatechnical",
+"thapa"];
+console.log(myFriendNames.lastIndexOf("thapa"));|
+
+output 4 aaegaa    /// backward search krta hai yeah 
+
+// Array.prototype.includes ( )
+// Determines whether the array contains a value,
+// returning true or false as appropriate.
+var myFriendNames = ["vinod", "bahadur","thapa", "thapatechnical"];
+console.log(my FriendNames.includes("thapa"));
+
+output true  // bht kaam aata hai jab hmme dhundhna ho ki element present hai ya nhn 
+
+//
+Array.prototype.find()
+// arr.find(callback(element[,
+index[, array]])[, thisArg])
+// Returns the found element in the array, if some element in the 
+// array satisfies the testing function, or undefined if not found. 
+// Only problem is that it return only one element
+
+const prices = [200, 300, 350, 400, 450, 500, 600];
+// price < 400
+const findElem = prices.find((currVal) ⇒ { 
+return currVal < 400;
+});
+console.log(findElem);
+
+// output 200                                                                               // ek hi output degaaaa
+
+console.log( prices.find((currval) ⇒ currVal< 400 ) );           // ek hi line me ho jaaega 
+
+// Array.prototype.filter()
+// Returns a new array containing all elements of the calling 
+// array for which the provided filtering function returns true.
+
+const prices = [200,300.350,400,450,654];
+
+console.log( prices.filter((prices) => prices < 400) )            // fat arrow method 
+
+output // 200 , 300.350                           // bht use hogaa aange react wagera me 
+
+
+
+X  How to Sort and Compare an Array
+
+// Array.prototype.sort() [
+// The sort() method sorts the elements of an array in place and 
+//returns the sorted array. The default sort order is ascending, built 
+//upon converting the elements into strings,
+// then comparing their sequences of UTF-16 code units values.
+ // array ko sort as a string ke form me kregaaa 
+
+X  How to Insert, Add, Replace and Delete Elements in Array (CRUD)
+
+// Array.prototype.push()
+// The push() method adds one or more elements to the
+// end of an array and returns the new length of the array.
+
+const animals = ['pigs', 'goats', 'sheep'];
+animals.push('chicken');
+const count = 
+console.log(animals); 
+console.log(count);
+
+output pigs , goats , sheep , chicken
+          4
+
+// ADDING ELEMENT TO THE BEGINNING OF THE ARRAY  
+ 
+// Array.prototype.unshift()
+// The unshift() method adds one or more elements to the
+// beginning of an array and returns the new length of the array.
+
+
+// Array.prototype.pop()
+// The pop() method removes the last element from an array and returns 
+// that element. This method changes the length of the array.
+const plants = ['broccoli', 'cauliflower', 'kale', 'tomato', 'cabbage'];
+console.log(plants); 
+console.log(plants.pop()); 
+console.log(plants);
+
+output  'broccoli', 'cauliflower', 'kale', 'tomato', 'cabbage
+output cabbage
+output 'broccoli', 'cauliflower', 'kale', 'tomato' 
+
+
+// Array.prototype.shift()
+// The shift() method removes the first element from an array and returns 
+// that removed element. This method changes the length of the array.
+const plants = ['broccoli', 'cauliflower', 'kale', 'tomato', 'cabbage']; 
+console.log(plants);
+console.log(plants.()); 
+console.log(plants);
+
+output 'cauliflower', 'kale', 'tomato', 'cabbage'
+output 'cauliflower'
+output   'kale', 'tomato', 'cabbage'
+
+// BONUS                                                                                 XXXXXXXXXXXXXXX       SPLICE       XXXXXXXXXXXXX
+
+// Array.prototype.splice()
+// Adds and/or removes elements from an array.
+
+const months = ['Jan', 'march', 'April', 'June', 'July'];
+// soll:
+const newMonth = months.splice(5,0,"Dec");     //   (index jispe add krr rhee ho , ibdex jispe delete krr rhee ho , string konsi add kr rhee ho)
+console.log(months);
+
+output 
+
+'Jan', 'march', 'April', 'June', 'July', 'Dec'
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   
+MAP FUNCTION 
+
+// Array.prototype.map()
+// let newArray = arr.map(callback(currentValue[,
+index[, array]]) {
+// return element for newArray, after executing something 
+// }[, thisArg]);
+// Returns a new array containing the results of calling a 
+// function on every element in this array.
+
+
+
+const array1 = [1, 4, 9, 16, 25]; 
+// num > 9
+let newArr = array1.map((curElem, index, arr) ⇒ {  return curElem > 9 })
+console.log(array1);
+console.log(newArr);
+
+// output    
+
+E:\MERN\JS2021>node index.js 
+[1, 4, 9, 16, 25 ]
+[ false, false, false, true, true ]
+
+
+let newArr
+= array1.map((curElm,
+index, arr) ⇒ {
+return `Index no = ${index} and the value is ${curElm} belong to ${arr}
+})
+console.log(newArr);	                                                                         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                                                                                                                                     
+                                                                                                          API ME USE HOTA HAI JAB AAPKO KOI RECORD BAAR 
+                                                                                                  BAAR UPDATED ME DEKHNAA HO TOH JAISE CORONA                   
+// output 
+
+[
+'Index no = 0 and the value is 1 belong to 1,4,9,16,25 
+'Index no = 1 and the value is 4 belong to 1,4,9,16,25 
+'Index no = 2 and the value is 9 belong to 1,4,9,16,25 
+'Index no = 3 and the value is 16 belong to 1,4,9,16,25 
+'Index no = 4 and the value is 25 belong to 1,4,9,16,25
+]
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Reduce Method    (JHA PRR SIRF EK SINGLE VALUE CHHHIYE HOGI WHAA PRR USE HOGAA 
+// flatten an array means to convert the 3d or 2d array into a 
+// single dimensional array
+The reduce() method executes a reducer function (that you provide) 
+on each element of the array, resulting in single output value.
+The reducer function takes four arguments:
+Accumulator 
+Current Value 
+Current Index 
+Source Array
+
+
+let arr = [5,6,2];
+let sum = arr.reduce((accumulator, curElem, index, arr) ⇒ {                         // accumulator basically sb ko ek jgh collect krr legaa 
+return accumulator += curElem;
+})
+console.log(sum);
+
+
+output 
+
+13
+
+
+let arr = [2, 3, 4, 6, 8];
+let arr2 = arr.map ((curElm) ⇒ curElm * 2).filter((curElem) ⇒ curElem > 10 ).reduce((accumulator, curElem) → {
+return accumulator += curElem;
+}); 
+console.log(arr2);
+
+output 28                                                                   // CHAIN METHOD MTLB SARE METHODS EK JGH PRR USE KRNAA 
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+                                                                                                  STRINGS IN JAVASCCRIPT 
+
+
+
+ 
+
+ Escape Character
+Finding a String in a String
+Searching for a String in a String
+Extracting String Parts
+Replacing String Content 
+Extracting String Characters
+Other useful methods
+
+
+
+
+// A JavaScript string is zero or more characters written inside quotes.
+// JavaScript strings are used for storing and manipulating text.
+// You can use single or double quotes
+// Strings can be created as primitives,
+// from string literals, or as objects, using the String() constructor
+
+
+1  
+ LENGTH 
+How to find the length of a string 
+String.prototype.length
+Reflects the length of the string.
+
+2
+ ESCABAR 
+
+Escape Character
+let anySentence = "We are the so-called \"Vikings\" from the north."; 
+console.log(anySentence);
+// // if you dont want to mess, simply use the alternate quotes
+let anySentence = We are the so-called "Vikings" from the north. 
+console.log(anySentence);
+
+
+
+
+3
+  FINDING A STRING IN STRING 
+
+//
+Finding a String in a String
+// String.prototype.indexOf(searchValue [, fromIndex])
+// The indexOf() method returns the index of (the position of) the first 
+// occurrence of a specified text in a string
+const myBioData = 'I am the Thapa Technical'; 
+console.log(myBioData indexOf("Thapa"));                                                        // SPACE BHI EK STRING KI TRH COUNT HOTI HAI 
+
+
+FINDING A STRING FROM THE LAST INDEX 
+
+// // String.prototype.lastIndexOf(searchValue [, fromIndex]) 
+// // Returns the index within the calling String object of the 
+// // last occurrence of searchValue, or -1 if not found.
+
+4
+  SEARCHIING A STRING IN STRING 
+
+//
+// String.prototype.search(regexp)
+// The search() method searches a string for a specified 
+// value and returns the position of the match
+Searching for a String in a String
+const myBioData = 'I am the thapa Technical'; 
+let sData = myBioData.search("thapa"); 
+console.log(sData);
+
+output 9            // index hi deta hai jhaa prr present hai 
+
+
+
+5 
+  EXTRACTING STRINGS PART 
+
+
+// Extracting String Parts
+// There are 3 methods for extracting a part of a string:
+// slice(start, end)
+// substring(start, end)
+// substr(start, length)
+
+XXX   SLICE METHOD  XXXXX
+
+// The slice() Method t
+// slice() extracts a part of a string and returns the extracted part 
+// in a new string.
+// The method takes 2 parameters: the start position,
+// and the end position (end not included).
+
+
+The slice() method selects the elements starting at the  given start argument, and ends at, but does not include,  the given end argument.
+
+
+var str = "Apple, Bananaa, Kiwi, mango";
+// let res = str.slice(0,4); 
+let res = str.slice(7, -2); 
+console.log(res);
+
+output     Bananaa, Kiwi, man
+
+Q: Display only 280 characters of a string like the one  used in Twitter?   KBHI SOCHA HI NHN  THAA KI YEAH BHI PDHUNGA 
+
+SOL     0 -279    dimag lagane kaa 
+
+
+XXXX   SUBSTRING METHOD  XXXX
+
+// The substring() Method
+// substring() is similar to slice().
+// The difference is that substring() cannot accept  negative indexes. 
+
+var str =
+"Apple,   Bananaa,   Kiwi"; 
+let res = str.substring(7,-2); 
+console.log(res);
+
+OUTPUT   Apple, 
+
+
+XXXXXXX  SUBSTR   XXXXXX
+
+
+// The substr() Method
+// substr() is similar to slice().
+// The difference is that the second parameter specifies the 
+// length of the extracted part. 
+
+
+
+var str = "Apple, Bananaa, Kiwi";
+let res = str.substr(0,4); 
+console.log(res);
+
+
+OUTPUT   Appl     ( LAST WALA INCLUDE NHN HONE KA )
+
+
+6
+  REPLACEING STRING CONTENT 
+
+// ✔Replacing String Content()
+// String.prototype.replace(searchFor, replaceWith)
+// The replace() method replaces a specified value 
+// with another value in a string.
+
+
+let myBioData = `I am vinod bahadur thapa vinod`;
+let repalceData = myBioData.replace('vinod', 'Vinod' ); 
+console.log(repalceData);
+
+
+OUTPUT       I am Vinod bahadur thapa vinod
+
+// Points to remember
+// 1: The replace() method does not change the string 
+// it is called on. It returns a new string.
+// 2: By default, the replace() method replaces only 
+// the first match
+// 3: By default, the replace() method is case sensitive.
+// Writing VINOD (with upper-case) will not work
+
+
+
+7
+  EXTRACTING STRING CHARACTER 
+
+Extracting String Characters
+// There are 3 methods for extracting string characters:
+// charAt(position) 
+// charCodeAt(position) 
+// Property access [ ]
+
+// The charAt() Method Ⓡ
+// The charAt() method returns the character at a 
+// specified index (position) in a string
+
+
+// The charCodeAt() Method to
+// The charCodeAt() method returns the unicode of the 
+// character at a specified index in a string:
+// The method returns a UTF-16 code 
+// (an integer between 0 and 65535).|
+
+The Unicode Standard provides a unique number for every 
+character, no matter the platform, device, application, 
+or language. UTF-8 is a popular Unicode encoding which 
+has 88-bit code units.
+
+
+// Property Access
+// ECMAScript 5 (2009) allows property access [] on strings
+
+var str = "HELLO WORLD";
+console.log(str[1]);
+
+OUTO]PUT    H 
+
+
+var str = "HELLO WORLD";
+console.log(str[1]);
+
+
+// The concat() Method
+// concat() joins two or more strings
+let fName = "vinod" 
+let 1Name = "thapa"
+console.log(fName.concat(1Name)); 
+console.log(fName.concat(" " lName));
+
+
+
+TRIM METHOD 
+
+// String.trim()
+// The trim() method removes whitespace from both sides of a s
+var str = "                          Hello World! "
+console.log(str.trim());
+Hello World!
+
+
+TO CONVERT  STRING INTO AN ARRAY 
+
+
+// Converting a String to an Array
+// A string can be converted to an array with the 
+// split() method
+var txt = "a,b,c,d,e"; // String 
+console.log(txt.split(","));    // Split on commas 
+console.log( txt.split(" "));   // Split on spaces
+console.log(txt.split("|"));    // Split on pipe
+
+OUTPUT 
+
+E:\MERN\JS2021>node index.js
+Hello
+World!
+[ 'a', 'b', 'c', 'd', 'e' ] 
+['a,b,c,d,e']
+['a,b,c,d,e']
+E:\MERN\JS2021>
+
+
+
+8
+DATE & TIME IN JAVASCRIPT
+
+X Date Methods (get and set) 
+X Time Methods (get and set)
+
+// JavaScript Date objects represent a single moment in time in a
+// platform-independent format. Date objects contain a Number 
+// that represents milliseconds since 1 January 1970 UTC.
+// Creating Date Objects
+// There are 4 ways to create a new date object:
+new Date()
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+// it takes 7 arguments
+new Date(milliseconds)
+// we cannot avoid month section
+new Date(date string)
+
+
+
+// new Date() 
+// Date objects are created with the new Date() constructor.
+let currDate = new Date(); 
+console.log(currDate);                                                                   KATAI ZEHER  MZAA AA RHII HAI AB 
+
+
+OUTPUT   let currDate = new Date(); 
+console.log(currDate);
+Sat Jan 02 2021 13:14:28 GMT+0530 (India Standard Time) 
+
+new Date.toLocaleString  ka use krke aap aapne code editor prr date laa sktee haiin 
+
+
+// Date.now()
+// Returns the numeric value corresponding to the current time-the number 
+// of milliseconds elapsed since January 1, 1970 00:00:00 UTC
+
+
+
+// new Date(year, month, ...)
+// 7 numbers specify year, month, day, hour, minute, second, 
+// and millisecond (in that order)
+// Note: JavaScript counts months from 0 to 11.
+// January is 0. December is 11.
+   var d = new Date(2018, 11, 24, 10, 33, 30, 0); 
+   console.log(d.toLocaleString());
+
+
+
+Dates Method             XXX  GET METHOD  XXX
+ const curDate = new Date();
+// // how to get the indivisual date 
+console.log(curDate.toLocaleString()); 
+console.log(curDate.getFullYear());
+console.log(curDate.getMonth()); // 0-11 jan to dec
+console.log(curDate.getDate());|
+console.log(curDate.getDay());
+
+OUTPUT
+
+21/8/2022, 9:38:33 pm
+2022
+7
+21
+0
+
+Dates Method     XXX SET METHOD XXX
+const curDate = new Date();
+console.log(curDate.setFullYear(2022 , 21 , 8));
+console.log(curDate.setMonth(8));
+console.log(curDate.setDate(21));
+console.log(curDate.setMinutes(26));
+console.log(curDate.toLocaleString());
+
+OUTPUT 
+
+
+1696781912252
+1694189912252
+1695313112252
+1695311792252
+21/9/2023, 9:26:32 pm
+
+
+TIME METHODS 
+
+const currDate = new Date();
+console.log(currDate.getHours());
+console.log(currDate.getMinutes());
+console.log(currDate.getTime());
+
+OUTPUT  
+
+23
+1
+1661103075805
+
+
+XXXXX  SET METHOD XXXXX
+
+const currTime = new Date();
+console.log(currTime.setHours(5));
+console.log(currTime.setMinutes(5));
+console.log(currTime.setSeconds(5));
+console.log(currTime.setMilliseconds(5));
+console.log(currTime.toLocaleString(5));
+
+
+OUTPUT 
+
+
+1661039907992
+1661038527992
+1661038505992
+1661038505005
+21/8/2022, 5:05:05 am
+
+
+
+
+
+ XXXXXXXXXXXXXX   MATHS OBJECT IN JAVASCRIPT     XXXXXXXXXXXXX
+
+
+
+XXXXXXXXXXX   DOM   XXXXXXXXXXXXXXX
+
+
+window
+1: Window is the main container or we can say the 
+global Object and any operations related to entire 
+browser window can be a part of window object.
+                                                                                                                                                                                Document
+                                                                                                                                             1: whereas the DOM is the child of window object
+                                                                                                                                              2: Where in the DOM we need to refer the document, if we
+                                                                                                                                                  want to use the document object, methods or properties
+2: All the members like objects, methods or properties. 
+If they are the part of window object then we do not 
+refer the window object.
+                                                                                                                                                      3: Document is just the object of the global 
+                                                                                                                                                    object that is Window, which deals with  the document, 
+                                                                                                                                                                                                                                the HTML elements themselves.
+3:Window has methods, properties and object. ex 
+setTimeout() or setInterval() are the methods, where as 
+Document is the object of the Window and It also has 
+a screen object with properties describing the physical 
+display.
+
+
+
+
+JI The DOM is the Document Object Model, which deals with the document, 
+// the HTML elements themselves, e.g. document and all traversal you 
+// would do in it, events, etc.
+// For Ex:
+// change the background color to red
+// document.body.style.background = "red";
+JI
+The BOM is the Browser Object Model, which deals with browser components 
+// aside from the document, like history, location, navigator and screen
+// (as well as some others that vary by browser). OR
+// In simple meaning all the Window operations which comes under BOM are performed 
+// usign BOM5
+
+
+
+// consoloe me jaa krr aap yeah krro bht mzaa aaega re baba !!
+
+
+// 1: document.documentElement
+// returns the Element that is the root element of the document. 
+document.head
+// 2:
+/3: document.body
+// 4: document.body.childNodes (include tab, enter and whiteSpace) 
+// list of the direct children only
+// 5: document.children (without text nodes, only regular Elements) 
+/ 6: document.childNodes.length
+Practice Time
+// How to check whether an element has child nodes or not?
+// we will use hasChildNodes ()
+
+
+
+
+
+// Now the same we have is the query selectors
+// querySelector returns the first matching value whereas 
+// querySelectorAll() will return all the elements
+document.querySelector('#heading').innerHTML = "I changed again";
+
+
+
+Difference Between getElementById And querySelector?
+What is getElementById()?
+Т
+<!-
+Syntax:
+element = document.getElementById(id);
+Returns a reference to the element by its ID.
+If the element with the specified ID is not in the document, 
+it will returns null. →
+What is querySelector()?
+<!— 
+Syntax:
+element = document.querySelector(selectors);
+Returns the first element within the document 
+that matches the specified group of selectors, 
+or null if no matches are found. →
+
+
+// basically agr class yaa id wagera kaa naam naa diya ho toh aap getElementBy nhn use krr sktee 
+ nhn use krr skte but wha prr aap queryselector  jarur use krr skte hai 
+
+
+
+11
+   EVENTS IN JAVASCRIPT
+
+
+4 ways of writing Events in JavaScript 
+What is Event Object? 
+MouseEvent in JavaScript 
+KeyboardEvent in JavaScript 
+InputEvents in JavaScript
+
+
+
+EVENTS 
+
+// HTML events are "things" that happen to HTML elements.
+// When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+HTML Events
+// An HTML event can be something the browser does, or something a user does.
+// Here are some examples of HTML events:
+// An HTML web page has finished loading
+/An HTML input field was changed
+// An HTML button was clicked
+// Often, when events happen, you may want to do something.
+// JavaScript lets you execute code when events are detected.	
+
+
+
+JavaScript lets you execute code when events are detected.
+HTML allows event handler attributes, with JavaScript code, 
+to be added to HTML elements.
+
+
+section 4 ways of writing Events in JavaScript
+l: using inline events alert();
+2: By Calling a funcion (We already seen and most common way of writing) 
+3: using Inline events (HTML onclick="" property and element.onclick) 
+using Event Listeners (addEventListener and IE's attachEvent)
+
+
+
+section 2: What is Event Object?
+/ Event object is the parent object of the event object.
+for Example 
+/ MouseEvent,
+focusEvent, Keyboard Event etc
+
+
+
+// section 2: What is Event Object?
+// Event object is the parent object of the event object. 
+// for Example
+// MouseEvent,
+focusEvent, KeyboardEvent etc
+
+
+document.getElementById('fourtWay');
+const fourtWay
+const checkEvent = () →  {                                                 // ISSE HMME SB PTAA CHL JAAEGA KI KITNE BAAR CLICK HUAA AUR KONSA EVENT CALL HUA SB 
+  alert('hum dekh rhe hai event object'); 
+console.log(event);
+console.log(event.target); 
+console.log(event.type); 
+}
+
+
+
+MOUSE EVENT 
+
+/section 3 MouseEvent in JavaScript
+// The MouseEvent Object
+// Events that occur when the mouse interacts with the HTML 
+// document belongs to the MouseEvent Object.
+
+
+
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()"> 
+Click the text! The mouseDown() function is triggered when the mouse 
+button is pressed down over this paragraph, and sets the color of the text to red. 
+The mouseUp() function is triggered when the mouse button is released, and sets 
+the color of the text to green.
+</p>
+<script>
+function mouseDown() {
+document.getElementById("myP").style.color = "#F8B627";
+}
+function mouseUp() {
+document.getElementById("myP").style.color = '#fff';                                                                // basically aap jab cursor hover kroge yaa click kroge tab jo color aaega wo mouse event hai 
+
+}
+
+KEYBOARD EVENT IN JAVASCRIPT 
+
+section 4 Keyboard Event in JavaScript
+Events that occur when user presses a key on the keyboard, 
+belongs to the Keyboard Event Object.
+
+TIME BASED EVENTS IN JAVASCRIPT 
+
+
+setTimeout() 
+setInterval()
+clear Timeout() 
+clearInterval()
+
+
+
+
+The window object allows execution of code at specified time intervals.
+These time intervals are called timing events.
+The two key methods to use with JavaScript are:
+
+setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+setInterval function, milliseconds)
+Same as setTimeout(), but repeats the execution of the function continuously.
+
+
+
+
+
+
+OBJECTS IN JAVASCRIPT 
+
+"/ What is Object Literal?
+/ Object literal is simply a key:value pair data structure. 
+/ Storing variables and functions together in one container, 
+we can refer this as an Objects.
+/ How to create an Object?
+"/ 1st way
+
+
+let bioData = {
+myName : "thapatechnical",
+myAge : 26, 
+getData: function(){
+console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);=
+}
+}
+console.log(bioData.getData());
+
+// 2nd way no need to write functions as well after es6
+let bioData = {
+myName : "thapatechnical",
+myAge : 26, 
+getData(){
+console.log('My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+}
+}
+bioData.getData();
+
+
+
+XXXXXXXXXXXXXXXXXXX                                         ADVANCE    JAVASCRIPT       PART  - 01                            XXXXXXXXXXXXXXXXXXXXXX
+
+
+
+Event Propagation (Event Bubbling and Event Capturing) 
+Higher Order Function
+Callback Function
+Function Currying (We will see after Async JS section) 
+CallBack Hell
+AJAX call using XMLHttprequest
+BONUS Section JSON
+Fetch API
+Promises
+Async-Await
+Error Handling in JS
+
+
+
+The Event Propagation mode 
+determines in which order the 
+elements receive the event.
+
+
+
+The Event 
+Propagation
+window
+document
+Capture phase    top to bottom ko hmm capture phase khte hain 
+Bubble phase    bottom to top ko bubble phase khte hain 
+<html>
+<body>
+<div>
+<button>
+
+
+Event bubbling and capturing are 
+two ways of event propagation in the 
+HTML DOM API, when an event 
+occurs in an element inside another 
+element, and both elements have 
+registered a handle for that event.
+The event propagation mode 
+determines in which order the 
+elements receive the event.
+
+
+By default event bubbling hii rhtaa hai 
+
+capture ke liyeee add event listener se krtee hain 
+
+=
+const parentId 
+const childId =
+document.getElementById('parentId' ); 
+document.getElementById('childId' );
+const parentCall = () ⇒ { 
+| alert( 'Parent Div Call');
+}
+const childCall = () = { 
+alert('Child Div Call'); 
+event.stopPropagation();
+}
+parentId.addEventListener('click', parentCall,true/false);              //  agr aap true lete ho toh capture event ho jaaega wrnaa bubbbling hi rhegaa  
+childId.addEventListener('click', childCall, true/false);
+
+
+
+    HOW JAVASCRIPT WORKS AND ASYNCHRONOUS JAVASCRIPT
+
+
+Hoisting in JavaScript 
+Scope Chain
+Lexical Scoping in JavaScript
+Jse Strict Mode
+This Keyword
+Closures in JavaScript
+What is Asynchronous JavaScript Programming? 
+What is Event Loop?
+
+
+
+we have a creation phase and execution phase.
+Hoisting in Javascript is a mechanism where variables and functions 
+declarations are moved to the top of their scope before the code execute.  // HOISTING 
+
+
+var myName = undefined; 
+console.log(myName); 
+my Name "thapa";
+
+
+9 In ES2015 (a.k.a. ES6), hoisting is avoided by using the let keyword 
+instead of var. (The other difference is that variables declared 
+with let are local to the surrounding block, not the entire function.)
+
+
+6 What is Scope Chain and Lexical Scoping in JavaScript?
+The scope chain is used to resolve the value of variable names 
+_n JS.
+cope chain in js is lexically defined, which means that we can 
+see what the scope chain will be by looking at the code.
+at the top, we have the Global Scope, which is the window Object 
+in the browser.
+exical Scoping means Now, the inner function can get access to 
+heir parent functions variables But the vice-versa is not true. 
+
+
+
+
+
+7 What is Closures in JavaScript
+closure is the combination of a function bundled together (enclosed) with references 
+o its surrounding state (the lexical environment).
+In other words, a closure gives you
+ccess to an outer function's scope from an inner function.
+n JavaScript, closures are created every time a function is created, at function creation time.
+For Example
+t same like lexical scoping
+One more Example
+
+const outerFun = (a) = { 
+let b = 10;
+() = {
+sum of the two no is ${sum}`);
+const innerFun = 
+let sum = a+b; 
+console.log(`the
+}
+innerFun();
+}
+outerFun (5);
+
+OUTPUT 15
+
+
+
+
+
